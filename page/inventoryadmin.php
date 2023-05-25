@@ -28,7 +28,7 @@ include "../db/connection.php";
         <div class="topleft">
             <a class="" href="adminPage.php">Home</a>
             <a class="active" href="inventoryadmin.php">Inventory</a>
-            <a class="" href="#">Reports</a>
+            <a class="" href="Reports.php">Reports</a>
         </div>
 
         <div class="topright">

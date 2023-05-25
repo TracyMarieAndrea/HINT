@@ -10,7 +10,7 @@ if (isset($_POST['add_Data'])) {
     $cost = $_POST['item_cost'];
 
 
-    $sql = "INSERT INTO inventory (item_name, item_quantity, item_cost) VALUES ('$itemName', '$cost', '$quantity')";
+    $sql = "INSERT INTO inventory (item_name, item_quantity, item_cost) VALUES ('$itemName', '$quantity', '$cost')";
 
     if (mysqli_query($conn, $sql)) {
         header("Location: ../../page/inventoryAdmin.php");

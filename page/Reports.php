@@ -27,8 +27,8 @@ include "../db/connection.php";
         </div>
         <div class="topleft">
             <a class="" href="adminPage.php">Home</a>
-            <a class="active" href="inventoryadmin.php">Inventory</a>
-            <a class="" href="#">Reports</a>
+            <a class="" href="inventoryadmin.php">Inventory</a>
+            <a class="active" href="#">Reports</a>
         </div>
 
         <div class="topright">
@@ -54,7 +54,8 @@ include "../db/connection.php";
     <script src="../js/modalMenu.js"></script>
 
     <?php
-    $sql = "SELECT * FROM inventory";
+    $sql = "SELECT * FROM reportTable;
+            ";
 
     $result = mysqli_query($conn, $sql);
     ?>
@@ -63,13 +64,53 @@ include "../db/connection.php";
         <table>
             <thead>
                 <tr class="rowhead">
-                    <th> </th>
-                    <th> Item </th>
-                    <th> Cost </th>
-                    <th> Quantity </th>
-                    <th> Options </th>
+                    <th class="rHead"> Sales Report </th>
                 </tr>
             </thead>
+        </table>
+        <table>
+            <thead>
+                <tr class="rowhead">
+                    <th> </th>
+                    <th> ID </th>
+                    <th> Item ID </th>
+                    <th> Quantity </th>
+                    <th> Total Price </th>
+                </tr>
+            </thead>
+            <?php
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+                    <tbody id="button-parent">
+                        <tr>
+                            <td>  </td>
+                            <td> <?php echo $row['rep_ID'] ?> </td>
+                            <td> <?php echo $row['item_id'] ?> </td>
+                            <td> <?php echo $row['buy_Quantity'] ?> </td>
+                            <td> ₱<?php echo $row['price_Total'] ?> </td>
+                        <?php } ?>
+                    <?php }
+                    ?>
+
+                <?php
+                $sql = "SELECT SUM(price_Total) AS total FROM reportTable";
+
+                 $result2 = mysqli_query($conn, $sql);
+                    ?>
+
+                    
+                    <table>
+            <thead>
+            <?php if ($result2 && $result2->num_rows > 0) {
+        $row = $result2->fetch_assoc();
+        $total = $row['total']; ?> 
+                <tr class="rowhead">
+                    <th> <?php echo"Total: ₱" . $total . "" ?> </th>
+                </tr>
+            </thead>
+        </table>
+         <?php } ?>
         </table>
     </div>
 

@@ -12,11 +12,20 @@ foreach ($data as $d) :
 
     $current_qty =  $d['item_quantity'];
 
+    $single_price = $d['item_cost'];
+
+    // $iName = $d['item_name'];
+
     $new_qty = $current_qty - $qty;
 
-    $sql2 = "UPDATE inventory SET item_quantity=$new_qty WHERE item_id=$pid";
+    $priceTotal = $qty * $single_price;
 
-    if ($conn->query($sql2) === TRUE) {
+    $sql2 = "UPDATE inventory SET item_quantity=$new_qty WHERE item_id=$pid;
+                INSERT INTO reportTable(item_id, buy_Quantity, price_Total)
+                VALUES ($pid, $qty, $priceTotal);";
+
+    if ($conn->multi_query($sql2) === TRUE) {
+
         header('Location: ' . $_SERVER['HTTP_REFERER']);
     } else {
         echo "Error updating record: " . $conn->error;
