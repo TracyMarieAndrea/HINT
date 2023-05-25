@@ -1,0 +1,119 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+body{
+background-image: url('../assets/sign_in_bg.png');
+background-repeat: no-repeat;
+background-size:cover;
+background-attachment: fixed;
+overflow: hidden;
+}
+
+.wrapper{
+margin: 60px auto;
+padding: 5px;
+background-color: #ffffff;
+max-width: 350px;
+min-height: 500px;
+text-align: center;
+border-radius: 20px;
+}
+
+.logo{
+text-align: center;
+}
+
+.logo img{
+width: 70px;
+height: 70px;
+}
+
+.container{
+text-align: center;
+margin: 30px;
+padding: 20px 20px;
+border: solid black 2px;
+border-radius: 0;
+box-sizing: border-box;
+}
+
+.title-login{
+text-align: center;
+margin-top: 30px;
+margin-bottom: 20px;
+}
+.title-login h2{
+margin-bottom: 20px;
+color: #4A3B12;
+}
+form input{
+width: 100%;
+display: block;
+border: none;
+outline: none;
+background: none;
+font-size: 1rem;
+color: #666;
+padding: 10px 15px 10px 10px;
+/* border: 1px solid red; */
+padding-left: 10px;
+margin-bottom: 25px;
+border-radius: 20px;
+box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+}
+
+.signin_btn {
+box-shadow: none;
+width: 60%;
+height: 40px;
+background-color: #FFC700;
+color: black;
+border: solid #FFC700 1px;
+border-radius: 25px;
+box-shadow: 3px 3px 3px #b1b1b1,
+-3px -3px 3px #fff;
+letter-spacing: 1.3px;
+margin-top: 30px;
+cursor: pointer;
+}
+.signin_btn:hover {
+background-color: #ffffff;
+}
+
+.cancel{
+    box-shadow: none;
+    width: 60%;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    border: solid #333 1px;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #b1b1b1,
+    -3px -3px 3px #fff;
+    letter-spacing: 1.3px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.cancel:hover{
+    background-color: #ffffff;
+    color: #333;
+}
+
+.back-btn {
+position: absolute;
+inset: 20px;
+width: 50px;
+height: 50px;
+background-color: #ffffff .5;
+border: none;
+border-radius: 10px;
+font-size: 24px;
+}
+.back-btn:hover{
+background-color: #FFC700;
+cursor: pointer;
+}

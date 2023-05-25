@@ -1,0 +1,38 @@
+.card{
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-left: 20px;
+    width: 320px;
+    margin: 45px;
+  }
+  .card:hover{
+    background-color: #f3d770;
+  }
+  .card-body{
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+  }
+  .card-name{
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .card-details{
+    margin-bottom: 5px;
+  }
+  .buyprod{
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: #ffc700;
+    cursor: pointer;
+  }
+  .buyprod:hover{
+    background-color: white;
+  }
