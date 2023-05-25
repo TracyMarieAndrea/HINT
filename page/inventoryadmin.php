@@ -27,7 +27,7 @@ include "../db/connection.php";
         </div>
         <div class="topleft">
             <a class="" href="adminPage.php">Home</a>
-            <a class="active" href="inventory.php">Inventory</a>
+            <a class="active" href="inventoryadmin.php">Inventory</a>
             <a class="" href="#">Reports</a>
         </div>
 
@@ -46,12 +46,12 @@ include "../db/connection.php";
             <div class="modal-body">
                 <a href="../php/logout.php">Logout</a>
                 <hr>
-                <a href="../form/signupForm.php">Sign In</a>
+                <a href="../form/signupForm.php">New Account</a>
             </div>
         </div>
     </div>
 
-    <script src="js/modal_menu.js"></script>
+    <script src="../js/modalMenu.js"></script>
 
     <?php
     $sql = "SELECT * FROM inventory";
@@ -64,7 +64,7 @@ include "../db/connection.php";
             <thead>
                 <tr>
                     <td>
-                        <form action="../form/addProductForm.php">
+                        <form action="../formAdmin/addProductForm.php">
                             <button class="add_btn">
                                 Add
                             </button>
@@ -91,8 +91,8 @@ include "../db/connection.php";
                             <td> <?php echo $row['item_cost'] ?> </td>
                             <td> <?php echo $row['item_quantity'] ?> </td>
                             <td>
-                                <a href="../form/updateProductForm.php?id=<?php echo $row['item_id']; ?>" id="addremove"><img src="../assets/add_item.png" alt="add item">
-                                    <a href="../form/deleteProductForm.php?id=<?php echo $row['item_id']; ?>" id="addremove"><img src="../assets/remove_item.png" alt="remove item">
+                                <a href="../formAdmin/updateProductForm.php?id=<?php echo $row['item_id']; ?>" id="addremove"><img src="../assets/add_item.png" alt="add item">
+                                    <a href="../formAdmin/deleteProductForm.php?id=<?php echo $row['item_id']; ?>" id="addremove"><img src="../assets/remove_item.png" alt="remove item">
                             </td>
 
                         <?php } ?>

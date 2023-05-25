@@ -33,8 +33,8 @@
             </div>
             <div class="topleft">
                 <a class="active" href="adminPage.php">Home</a>
-                <a href="inventory.php">Inventory</a>
-                <a href="#">Reports</a>
+                <a href="inventoryadmin.php">Inventory</a>
+                <a href="Reports.php">Reports</a>
             </div>
 
             <div class="topright">
@@ -52,7 +52,7 @@
                 <div class="modal-body">
                     <a href="../php/logout.php">Logout</a>
                     <hr>
-                    <a href="../form/signupForm.php">New Account</a>
+                    <a href="signupForm.php">New Account</a>
                 </div>
             </div>
 

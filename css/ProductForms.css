@@ -1,5 +1,10 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .form-wrapper{
     margin: 50px;
+    text-align: center;
 }
 .formmat {
     background-color: #ffc700;
@@ -34,6 +39,19 @@ label{
     cursor: pointer;
 }
 .button:hover
+{
+    background-color: white;
+}
+
+.cnl{
+    padding: 10px;
+    font-size: 16px;
+    margin: 20px;
+    background-color: #f3d770;
+    color: black;
+    cursor: pointer;
+}
+.cnl:hover
 {
     background-color: white;
 }

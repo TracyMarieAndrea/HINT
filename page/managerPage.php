@@ -34,6 +34,7 @@
         <div class="topleft">
             <a class="active" href="managerPage.php">Home</a>
             <a href="inventorymanager.php">Inventory</a>
+            <a href="#">Reports</a>
         </div>
 
         <div class="topright">

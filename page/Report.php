@@ -23,12 +23,12 @@ include "../db/connection.php";
     <!--Navigation bar-->
     <div class="topnav">
         <div class="logo">
-            <a href="managerPage.php"><img src="../assets/logo.png" alt="HINT Logo" class="logo"></a>
+            <a href="adminPage.php"><img src="../assets/logo.png" alt="HINT Logo" class="logo"></a>
         </div>
         <div class="topleft">
-            <a class="" href="managerPage.php">Home</a>
-            <a class="active" href="inventorymanager.php">Inventory</a>
-            <a href="#">Reports</a>
+            <a class="" href="adminPage.php">Home</a>
+            <a class="active" href="inventoryadmin.php">Inventory</a>
+            <a class="" href="#">Reports</a>
         </div>
 
         <div class="topright">
@@ -45,6 +45,8 @@ include "../db/connection.php";
             </div>
             <div class="modal-body">
                 <a href="../php/logout.php">Logout</a>
+                <hr>
+                <a href="../form/signupForm.php">New Account</a>
             </div>
         </div>
     </div>
@@ -60,15 +62,6 @@ include "../db/connection.php";
     <div class="table">
         <table>
             <thead>
-                <tr>
-                    <td>
-                        <form action="../formManager/addProductForm.php">
-                            <button class="add_btn">
-                                Add
-                            </button>
-                        </form>
-                        <br>
-                    </td>
                 <tr class="rowhead">
                     <th> </th>
                     <th> Item </th>
@@ -77,29 +70,8 @@ include "../db/connection.php";
                     <th> Options </th>
                 </tr>
             </thead>
-
-            <?php
-            if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)) {
-            ?>
-                    <tbody id="button-parent">
-                        <tr>
-                            <td> <?php echo $row['item_id'] ?> </td>
-                            <td> <?php echo $row['item_name'] ?> </td>
-                            <td> <?php echo $row['item_cost'] ?> </td>
-                            <td> <?php echo $row['item_quantity'] ?> </td>
-                            <td>
-                                <a href="../formManager/updateProductForm.php?id=<?php echo $row['item_id']; ?>" id="addremove"><img src="../assets/add_item.png" alt="add item">
-                                    <a href="../formManager/deleteProductForm.php?id=<?php echo $row['item_id']; ?>" id="addremove"><img src="../assets/remove_item.png" alt="remove item">
-                            </td>
-
-                        <?php } ?>
-                    <?php }
-                    ?>
-
-                    <?php if (isset($message)) {
-                        echo $message;
-                    } ?>
+        </table>
+    </div>
 
 </body>
 

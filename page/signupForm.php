@@ -34,7 +34,7 @@
                 </div>
                 <button name="submit" type="submit" class="signin_btn">Create New Account</button>
             </form>
-            <a href="#"><button name="button" type="button" class="cancel">Cancel</button></a>
+            <a href="adminPage.php"><button name="button" type="button" class="cancel">Cancel</button></a>
         </div>
     </div>
 </body>

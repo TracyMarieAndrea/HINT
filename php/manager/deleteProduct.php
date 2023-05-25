@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include "../db/connection.php";
+include "../../db/connection.php";
 
 if (isset($_POST['Deletion'])) {
 
@@ -12,9 +12,9 @@ if (isset($_POST['Deletion'])) {
 
     if ($query_run) {
         $_SESSION['status'] = "";
-        header("Location: ../page/inventory.php");
+        header("Location: ../../page/inventorymanager.php");
     } else {
         $_SESSION['status'] = "";
-        header("Location: ../page/inventory.php");
+        header("Location: ../../page/inventorymanager.php");
     }
 }

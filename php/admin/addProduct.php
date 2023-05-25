@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include "../db/connection.php";
+include "../../db/connection.php";
 
 if (isset($_POST['add_Data'])) {
 
@@ -13,9 +13,9 @@ if (isset($_POST['add_Data'])) {
     $sql = "INSERT INTO inventory (item_name, item_quantity, item_cost) VALUES ('$itemName', '$cost', '$quantity')";
 
     if (mysqli_query($conn, $sql)) {
-        header("Location: ../page/inventory.php");
+        header("Location: ../../page/inventoryAdmin.php");
     } else {
         echo "Try Again";
-        header("Location: ../page/inventory.php");
+        header("Location: ../../page/inventoryAdmin.php");
     }
 }
